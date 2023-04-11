@@ -11,7 +11,7 @@ pipeline {
             target = 'dev'
           } else if (env.GIT_BRANCH ==~ /(.+)release-(.+)/) {
             target = 'pre'
-          } else if (env.GIT_BRANCH == 'origin/master') {
+          } else if (env.GIT_BRANCH == 'origin/master'  || env.GIT_BRANCH == 'origin/main') {
             target = 'pro'
           } else {
             error "Unknown branch type: ${env.GIT_BRANCH}"
