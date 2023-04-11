@@ -6,6 +6,7 @@ pipeline {
     stage('Setup') {
       steps {
         script {
+          echo 'gitbranch: $env.GIT_BRANCH'
           if (env.GIT_BRANCH == 'origin/develop' || env.GIT_BRANCH ==~ /(.+)feature-(.+)/) {
             target = 'dev'
           } else if (env.GIT_BRANCH ==~ /(.+)release-(.+)/) {
