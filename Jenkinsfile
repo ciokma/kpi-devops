@@ -24,7 +24,7 @@ pipeline {
 
     stage('APP Build') {
       steps {
-        sh 'echo APP build'
+        sh 'echo APP build'f
       }
     }
   
@@ -85,7 +85,7 @@ pipeline {
         custom['branch']      = env.GIT_BRANCH
         custom['environment'] = target
         custom['part']        = 'jenkins'
-        custom['version']     = version
+        custom['version']     = 10
 
         step([$class: 'InfluxDbPublisher', customData: custom, target: 'devops-kpi'])
       }
@@ -100,7 +100,7 @@ pipeline {
         custom['branch']      = env.GIT_BRANCH
         custom['environment'] = target
         custom['part']        = 'jenkins'
-        custom['version']     = version
+        custom['version']     = 10
 
         step([$class: 'InfluxDbPublisher', customData: custom, target: 'devops-kpi'])
       }
@@ -115,7 +115,7 @@ pipeline {
         custom['branch']      = env.GIT_BRANCH
         custom['environment'] = target
         custom['part']        = 'jenkins'
-        custom['version']     = version
+        custom['version']     = 10
 
         step([$class: 'InfluxDbPublisher', customData: custom, target: 'devops-kpi'])
       }
@@ -130,7 +130,7 @@ pipeline {
         custom['branch']      = env.GIT_BRANCH
         custom['environment'] = target
         custom['part']        = 'jenkins'
-        custom['version']     = version
+        custom['version']     = 10
 
         step([$class: 'InfluxDbPublisher', customData: custom, target: 'devops-kpi'])
       }
