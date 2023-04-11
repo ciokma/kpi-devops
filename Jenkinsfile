@@ -24,7 +24,7 @@ pipeline {
 
     stage('APP Build') {
       steps {
-        sh 'echo APP build'f
+        sh 'echo APP build'
       }
     }
   
